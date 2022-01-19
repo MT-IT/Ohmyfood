@@ -1,5 +1,5 @@
 {
-  "name": "ohmyfood",
+  "name": "nohmyfood",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/MT-IT/Ohmyfood#readme",
   "dependencies": {
-    "sass": "^1.48.0"
+    "sass": "^1.49.0"
   }
 }
