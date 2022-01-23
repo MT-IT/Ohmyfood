@@ -4,7 +4,7 @@
 			<meta charset="UTF-8" />
             <meta name="viewport" content="max-width=768px">
 			<title>ohmyfood</title>
-            <link rel="stylesheet" type="text/css" href="style.css"
+            <link rel="stylesheet" type="text/css" href="sass/main.css"
 		</head>
 		<body>
             <header>
@@ -14,10 +14,14 @@
             </header>
 
             <section class="rechercher">
-                <form class="recherche" action="ohmyfood.html" method="get">
-                    <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" placeholder="Paris,Belleville">
-                </form>
+                <div class="location">
+                    <div class="location__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="location__city">
+                        <p>Paris, Belleville</p>
+                    </div>
+                </div>
             </section>
             <section class="section-explorer">
                 <div class="explore">
