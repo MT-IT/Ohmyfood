@@ -1,7 +1,7 @@
 @import "pages/index";
 @import "pages/menu";
 
-@mixin flexbox-center {
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ $color-tertiary: #99E2D0;
 
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: 0px;
     background: #f6f6f6;
     
 }
@@ -28,16 +28,16 @@ body {
     margin-right: auto;
     }
 .rechercher {
-    margin: 0;
-    padding: 0;
-    @include flexbox-center;
+    margin: 0px;
+    padding: 0px;
+    @include flex-center;
     flex-direction: column;
 }
 .location {
-    @include flexbox-center();
+    @include flex-center();
     background: #f3f3f3;
     color: #7a7a7a;
-
+        
     &__city {
         margin-left: 13px;
     }
@@ -48,22 +48,67 @@ body {
     &__container {
         width: 100%;
         padding: 20px;
-        @include flexbox-center();
+        @include flex-center();
         flex-direction: column;
         padding: 50px 0px 50px 0px;
     }
     &__title {
         text-align: center;
         max-width: 250px;
-        margin: 0;
+        margin: 0px;
     }
     &__text {
         text-align: center;
     }
-    &__button {
-        @include button-style;
-        &:hover {
-            @include button-hover;
+    &__button{
+        border-radius: 200px;
+        background-color: red;
+    }   
+}
+.functioning__contain{
+    width: 100%;
+    @include flex-center();
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+
+}
+.functioning{
+    width: 95%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 0 ;   
+    display: flex;
+    flex-direction: column ;
+    &__title {
+        margin: 0;
+    }
+    &__step {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        height: auto;
+        width: auto;
+        margin: 10px 20px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.16);
+        
+    }
+        &__rond {
+                background-color: $color-primary;
+                color: white;
+                position: absolute;
+                padding: 3px 8px 3px 8px;
+                border-radius: 500px;
+                transform: translateX(-50%);
+            }
+        &__FAS {
+            color: #7E7E7E;
+            margin: 0 20px;
         }
+    &__steps {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
