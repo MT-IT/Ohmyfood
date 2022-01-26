@@ -91,7 +91,8 @@ body {
 
 .explore__button {
   border-radius: 200px;
-  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(#9356DC, #FF79DA);
   padding: 0 20px 0 20px;
 }
 
@@ -194,7 +195,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%;
 }
 
 .restaurants__title {
@@ -209,7 +209,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .restaurant__galeries a {
@@ -334,6 +336,7 @@ body {
   display: inline;
   padding: 0 4%;
   width: 100%;
+  line-height: 30px;
 }
 
 .footer__bloc__elements {

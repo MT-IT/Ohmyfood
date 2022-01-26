@@ -68,7 +68,7 @@ body {
     }
     &__button{
         border-radius: 200px;
-        background-color: red;
+        background-image: linear-gradient($color-primary,$color-secondary);
         padding: 0 20px 0 20px;
     }   
 }
@@ -125,7 +125,7 @@ body {
     @include flex-center;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
+    
     
     &__title{
         padding: 20px;
@@ -137,7 +137,9 @@ body {
     &__galeries {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
         & a{ width: 92%;
             padding: 4%;
 
@@ -213,6 +215,7 @@ body {
         display: inline;
         padding: 0 4%;
         width: 100%;
+        line-height: 30px;
         
         
         &__elements {
