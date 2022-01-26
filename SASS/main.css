@@ -176,6 +176,18 @@ body {
           flex-direction: column;
 }
 
+@media screen and (min-width: 800px) {
+  .functioning__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .restaurants {
   margin: 0;
   background: #f6f6f6;
