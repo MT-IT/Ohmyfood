@@ -1,0 +1,79 @@
+.load{
+	margin: 0px;
+	width: 100%; 
+    @include flex-center();
+    height: 100%;
+
+    .progress {
+        width: 100%;
+		height: 30px;
+		position: fixed;
+        z-index: 1;
+        
+        &__cross {
+            margin-top: 80px;
+            height: 100%;
+			border: 3px solid $color-tertiary;
+            border-radius: 15px;
+            background-image: linear-gradient(to right, $color-primary, $color-secondary);
+			transform-origin: left;
+			transform: scaleX(0.8);
+			animation: progress-cross $prog-cross-dur $prog-cross-delay both;
+        }
+        
+        &__icon{
+            @include flex-center();
+            animation: spinner 3.5s both;
+            
+            & i{
+                margin-top: 80px;
+                text-shadow: 2px 2px 4px $color-tertiary;
+                font-size: 200px;
+                color: $color-primary;
+                animation-duration: 0.9s;
+            }
+        }
+    }
+}
+
+.header{
+    @include flexbox();
+    width: 100%;
+    height: 70px;
+    background: white;
+    
+    &__icon{
+        width: 50%;
+        position: absolute;
+        left: 25px;
+        font-size: 25px;
+        
+        & a{
+            color: black;
+        }
+    }
+
+    &__logo{
+        @include flexbox();    
+        width: 100%;
+    }
+
+    &__logo img{
+        width: 50%;
+        position: absolute;
+        @include desktop(){
+            width: 25%;
+        }
+    }
+}
+
+.image{
+    width: 100%;
+    height: 250px;
+     
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

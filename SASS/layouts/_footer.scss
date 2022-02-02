@@ -1,0 +1,59 @@
+.foot{
+    width: 100%;
+    background-color: #353535;
+    @include flexbox();
+    
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+
+    &__bloc{
+        padding: 0px 40px;
+        width: 100%;
+        max-width: 1200px;
+        @include desktop{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+         }
+
+        & .logo{
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 20px;
+            padding: 15px 0px;
+            
+            &:hover{
+                text-shadow: $color-secondary 6px 6px 12px;
+            }
+        }
+    
+        &-links{
+            display: flex;
+            flex-direction: column;
+            width: auto;
+        }
+    
+        &-link{
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 30px;
+            
+            & i {
+                margin-right: 8px;
+                font-size: 12px;
+            }
+            
+            &__title {
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+            }   
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        } 
+    }
+}
