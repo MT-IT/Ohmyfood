@@ -1,10 +1,11 @@
 {
-  "name": "nohmyfood",
+  "name": "ohmyfood",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+    "sass:index": "sass --watch ./sass/main.scss:.public/css/main-index.css",
+    "sass:menu": "sass --watch ./sass/main-menu.scss:./css/main-menu.css"
   },
   "repository": {
     "type": "git",
