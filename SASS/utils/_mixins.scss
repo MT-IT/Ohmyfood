@@ -33,35 +33,7 @@
     background-image: linear-gradient($color-secondary, $color-primary);
 }
 
-@keyframes progress-bar{
-	0% {
-		transform: scaleX(0);
-        visibility: visible;
-        opacity: 1;
-    }
-	25% {
-		transform: scaleX(0.18);
-        visibility: visible;
-        opacity: 1;
-    }
-	50% {
-		transform: scaleX(0.4);
-		animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
-        visibility: visible;
-        opacity: 1;
-    }
-	75% {
-		transform: scaleX(0.81);
-		animation-timing-function: cubic-bezier(0.25,0, 0.25, 1);
-        visibility: visible;
-        opacity: 1;
-    }
-    100% {
-		transform: scaleX(1);
-        visibility: hidden;
-        opacity: 0;
-    }
-}
+
 
 @keyframes invisible{
     0% {

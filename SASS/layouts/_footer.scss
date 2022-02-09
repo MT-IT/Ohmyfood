@@ -1,9 +1,9 @@
 .foot{
     width: 100%;
     background-color: #353535;
-    @include flexbox();
+    @include flex-center();
     
-    & a{
+    & p{
         text-decoration: none;
         color: white;
     }
@@ -22,6 +22,8 @@
             font-family: 'Shrikhand', sans-serif;
             font-size: 20px;
             padding: 15px 0px;
+            background-color: transparent;
+            margin-top: -15px;
             
             &:hover{
                 text-shadow: $color-secondary 6px 6px 12px;
@@ -32,6 +34,8 @@
             display: flex;
             flex-direction: column;
             width: auto;
+            margin-top: -20px;
+            margin-bottom: 30px;
         }
     
         &-link{

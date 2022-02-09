@@ -131,7 +131,6 @@ h3 {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
-  background: #f6f6f6;
 }
 
 * a {
@@ -139,9 +138,7 @@ body {
   color: white;
 }
 
-.load {
-  margin: 0px;
-  width: 100%;
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,64 +148,56 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-}
-
-.load .progress {
   width: 100%;
-  height: 30px;
-  position: fixed;
-  z-index: 1;
+  height: 70px;
+  background: white;
 }
 
-.load .progress__cross {
-  margin-top: 80px;
-  height: 100%;
-  border: 3px solid #99E2D0;
-  border-radius: 15px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#9356DC), to(#FF79DA));
-  background-image: linear-gradient(to right, #9356DC, #FF79DA);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(0.8);
-          transform: scaleX(0.8);
-  -webkit-animation: progress-cross 1500ms 500ms both;
-          animation: progress-cross 1500ms 500ms both;
-}
-
-.load .progress__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: spinner 3.5s both;
-          animation: spinner 3.5s both;
-}
-
-.load .progress__icon i {
-  margin-top: 80px;
-  text-shadow: 2px 2px 4px #99E2D0;
-  font-size: 200px;
-  color: #9356DC;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
-}
-
-.logo {
-  background-color: white;
-}
-
-.logo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+header__icon {
   width: 50%;
-  background-color: white;
+  position: absolute;
+  left: 25px;
+  font-size: 25px;
+}
+
+header__icon a {
+  color: black;
+}
+
+header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header__logo img {
+  width: 50%;
+  position: absolute;
+}
+
+@media screen and (min-width: 800px) {
+  header__logo img {
+    width: 25%;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .rechercher {
@@ -227,6 +216,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #f3f3f3;
 }
 
 .location {
@@ -291,10 +281,12 @@ body {
   background-image: linear-gradient(#FF79DA, #9356DC);
   padding: 0 20px 0 20px;
   color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 4px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 10px 4px;
 }
 
 .explore__button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -353,8 +345,8 @@ body {
   background: #f6f6f6;
   height: auto;
   width: auto;
-  margin: 10px 30px;
-  padding: 5px;
+  margin: 15px 30px;
+  padding: 10px;
   border-radius: 20px;
   position: relative;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
@@ -362,7 +354,7 @@ body {
 }
 
 .functioning__step:hover {
-  opacity: 0.8;
+  opacity: 0.3;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -379,8 +371,8 @@ body {
   position: absolute;
   padding: 3px 8px 3px 8px;
   border-radius: 500px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
 }
 
 .functioning__FAS {
@@ -432,10 +424,13 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 30px;
 }
 
 .restaurants__title {
   padding: 20px;
+  margin-top: 40px;
+  margin-bottom: -10px;
 }
 
 .restaurant__galeries {
@@ -449,6 +444,7 @@ body {
   width: 96%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .restaurant__galeries a {
@@ -600,7 +596,7 @@ body {
           align-items: center;
 }
 
-.foot a {
+.foot p {
   text-decoration: none;
   color: white;
 }
@@ -631,6 +627,7 @@ body {
   font-size: 20px;
   padding: 15px 0px;
   background-color: transparent;
+  margin-top: -15px;
 }
 
 .foot__bloc .logo:hover {
@@ -646,6 +643,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: auto;
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
 .foot__bloc-link {
