@@ -1,6 +1,187 @@
-@import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Base/base";
-@import "./Layouts/header";
-@import "./Layouts/sections";
-@import "./Layouts/footer";
+#menu{
+    display: flex;
+    width: 100%;
+}
+
+.menu{
+    width: 100%;
+    margin-top: -50px;
+    border-radius: 30px 30px 0px 0px;
+    background-color: #F6F6F6;
+    margin-bottom: 50px;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        &__title {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 26px;
+            margin-left: 2%;
+        }      
+        
+        &__icon {
+            font-size: 25px;
+            cursor: pointer;
+            padding-right: 5%;
+            margin-right: 40px;
+            margin-bottom: 30px;
+
+            & i{
+                position: absolute;
+            }
+            
+            & .far{
+                color: black;
+                
+                &:hover{
+                    color: transparent;
+                    opacity: 1;
+                    
+                }
+            }
+        
+            & .fas{
+                color: transparent;
+                opacity: 0;
+
+                &:hover{
+                    background-image: linear-gradient(to right, $color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 1;
+                    transform: scale(1.15);
+                    transition: all 300ms;
+                }
+            }
+        }
+    }
+
+    &__table{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+
+        & h2{
+            font-weight: 1;
+            font-size: 20px;
+        }    
+        
+        & h2::after{
+            display: flex;
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: $color-tertiary;
+            }
+        
+        &__info{
+            margin-left: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 80%;
+
+            &-title{
+                font-weight: bold;
+            }
+
+            &-txt{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            & p{
+                margin: 0px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }     
+        }
+        
+        &__price{
+            font-weight: bold;
+            padding-right: 15px;
+            padding-left: 8px;
+            margin-top: 20px;
+        }
+
+        &__validate{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-tertiary;
+            overflow: hidden;
+            margin-right: -25%;
+
+            & i{
+                font-size: 20px;
+                color: white;
+            }
+        } 
+    }
+
+    .menu-bloc{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__info-price{
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 70px;
+            margin-bottom: 3%;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.16);
+            animation: up-down 2s both;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 150ms * $i;
+                }
+            }
+
+            &:hover{
+                .menu__table__validate{
+                    margin-right: 0px;
+                    transition: margin-right 0.5s;
+                }
+                
+                i{
+                    animation: turn-over 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+    
+    &__order{
+        @include flex-center();
+        margin-top: 35px;
+        margin-bottom: 50px;
+
+        &-btn{
+            @include btn-shape();
+            @include gradient();
+            transform: scale(1.0);
+            padding: 15px 50px;
+
+            
+            &:hover{
+                @include btn-hover();
+                @include btn-shadow();
+                transform: scale(1.02);
+            }
+            
+            &:active{
+                box-shadow: 0px 0px 10px 2px $color-secondary;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

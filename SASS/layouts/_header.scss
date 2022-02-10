@@ -14,7 +14,7 @@
         &__icon{
             @include flex-center();
             animation: spinner 3.5s both;
-            margin-top: 30%;
+            margin-top: 50%;
             
             & i{
                 margin-top: 80px;
