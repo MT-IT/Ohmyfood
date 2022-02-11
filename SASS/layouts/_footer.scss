@@ -14,7 +14,7 @@
         max-width: 1200px;
         @include desktop{
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             flex-direction: column;
          }
 
@@ -43,6 +43,7 @@
             align-items: center;
             color: white;
             height: 30px;
+            
             
             & i {
                 margin-right: 8px;

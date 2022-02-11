@@ -60,12 +60,10 @@
     }
 
     &__logo img{
-        width: 39%;
+        width: 150px;
         position: absolute;
         margin-top: 10px;
-        @include desktop(){
-            width: 25%;
-        }
+        
     }
 }
 
