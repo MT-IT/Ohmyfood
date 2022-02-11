@@ -15,13 +15,20 @@
             @include flex-center();
             animation: spinner 3.5s both;
             margin-top: 50%;
+            @include desktop{
+                margin-top: 20%;
+                
+            }
             
             & i{
-                margin-top: 80px;
+                margin-top: 120px;
                 text-shadow: 2px 2px 4px $color-tertiary;
-                font-size: 150px;
+                font-size: 100px;
                 color: $color-primary;
                 animation-duration: 0.9s;
+                @include desktop{
+                    font-size: 200px
+                }
             }
         }
     }
@@ -30,8 +37,11 @@
 .header{
     @include flex-center();
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: white;
+    @include desktop{
+        height: 80px;
+    }
     
     &__icon{
         width: 50%;
@@ -50,8 +60,9 @@
     }
 
     &__logo img{
-        width: 50%;
+        width: 39%;
         position: absolute;
+        margin-top: 10px;
         @include desktop(){
             width: 25%;
         }
