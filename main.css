@@ -119,7 +119,6 @@ body {
           align-items: center;
   -webkit-animation: spinner 3.5s both;
           animation: spinner 3.5s both;
-  background: white;
   height: 2000px;
 }
 

@@ -14,8 +14,9 @@
         &__icon{
             @include flex-center();
             animation: spinner 3.5s both;
-            background: white;
+            
             height: 2000px;
+            
             
             
             & i{

@@ -30,16 +30,6 @@
     transform: rotate(360deg);
   }
 }
-@keyframes up-down {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0px;
@@ -71,19 +61,14 @@ body {
   justify-content: center;
   align-items: center;
   animation: spinner 3.5s both;
-  margin-top: 50%;
-}
-@media screen and (min-width: 800px) {
-  .load .progress__icon {
-    margin-top: 20%;
-  }
+  height: 2000px;
 }
 .load .progress__icon i {
-  margin-top: 120px;
   text-shadow: 2px 2px 4px #99E2D0;
   font-size: 100px;
   color: #9356DC;
   animation-duration: 0.9s;
+  margin-top: -1300px;
 }
 @media screen and (min-width: 800px) {
   .load .progress__icon i {
@@ -120,14 +105,9 @@ body {
   width: 100%;
 }
 .header__logo img {
-  width: 39%;
+  width: 150px;
   position: absolute;
   margin-top: 10px;
-}
-@media screen and (min-width: 800px) {
-  .header__logo img {
-    width: 25%;
-  }
 }
 
 .image {
@@ -289,7 +269,7 @@ body {
 .functioning__step {
   display: flex;
   align-items: center;
-  background: #f6f6f6;
+  background: white;
   height: auto;
   width: auto;
   margin: 15px 30px;
@@ -299,11 +279,11 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
 .functioning__step:hover {
-  opacity: 0.4;
+  opacity: 0.7;
   cursor: pointer;
   transition: transform 0.2s;
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
-  background: rgba(147, 86, 220, 0.6);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
+  background: rgba(147, 86, 220, 0.3);
 }
 .functioning__rond {
   background-color: #9356DC;
